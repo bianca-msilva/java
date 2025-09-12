@@ -9,16 +9,20 @@ public class Segunda2 {
 		
 		float notaTotal = 0;
 		
-		System.out.print("Digite a primeira nota: ");
+		System.out.print("Digite a primeira nota <Se necessário, utilizar vírgula ',' "
+				+ "para números não inteiros>: ");
 		notaTotal += leia.nextFloat();
 		
-		System.out.print("Digite a segunda nota: ");
+		System.out.print("Digite a segunda nota <Se necessário, utilizar vírgula ',' "
+				+ "para números não inteiros>: ");
 		notaTotal += leia.nextFloat();
 		
-		System.out.print("Digite a terceira nota: ");
+		System.out.print("Digite a terceira nota <Se necessário, utilizar vírgula ',' "
+				+ "para números não inteiros>: ");
 		notaTotal += leia.nextFloat();
 		
-		System.out.print("Digite a quarta nota: ");
+		System.out.print("Digite a quarta nota <Se necessário, utilizar vírgula ',' "
+				+ "para números não inteiros>: ");
 		notaTotal += leia.nextFloat();
 		
 		System.out.printf("A média final de acordo com as notas digitadas é: %.1f", notaTotal / 4);
