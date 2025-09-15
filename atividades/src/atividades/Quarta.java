@@ -22,7 +22,8 @@ public class Quarta {
 		System.out.println("Digite o quarto número: ");
 		n4 = leia.nextFloat();
 		
-		System.out.printf("diferença do produto entre o %.1f e %.1f pelo produto entre o %.1f e o %.1f é igual a %.1f", n1, n2, n3, n4, (n1 * n2) - (n3 * n4));
+		System.out.printf("diferença do produto entre o %.1f e %.1f pelo produto entre "
+				+ "o %.1f e o %.1f é igual a %.1f", n1, n2, n3, n4, (n1 * n2) - (n3 * n4));
 		
 		leia.close();
 
