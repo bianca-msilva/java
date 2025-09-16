@@ -42,6 +42,7 @@ public class Questao8Switch {
 			System.out.println("");
 		}
 		
+		input.close();
 
 	}
 
