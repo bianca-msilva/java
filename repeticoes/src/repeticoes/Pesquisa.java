@@ -44,12 +44,12 @@ public class Pesquisa {
 			
 			totalRespostas ++;
 			
-			// Para permitir que somente sejam digitados "S" ou "N"
-			//while(continua != "S" || continua != "N") {
+			// Para permitir que somente sejam digitados "S" ou "N" - VALIDAÇÃO DE DADOS
+			do{
 			System.out.println("Deseja continuar (S/N)? ");
 			input.skip("\\R");
 			continua = input.nextLine().toUpperCase();
-			//}
+			}while(!continua.equals("S") && !continua.equals("N"));
 		}
 		
 		// Calcular após o usuário selecionar para sair do loop
