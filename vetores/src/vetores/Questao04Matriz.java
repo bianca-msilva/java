@@ -19,7 +19,6 @@ public class Questao04Matriz {
 				soma += notas[linha][coluna];
 			}
 			media[linha] = soma/4;
-//			System.out.println("\nMédia final do: "+ (linha+1) + "° aluno: "  + media[linha] + "\n");
 			soma = 0;
 		}
 		

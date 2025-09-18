@@ -1,5 +1,6 @@
 package vetores;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Questao01Vetor {
@@ -9,6 +10,8 @@ public class Questao01Vetor {
 		
 		int num[] = {2, 5, 1, 3, 4, 9, 7, 8, 10, 6};
 		int nDigitado;
+		
+		Arrays.sort(num);
 		
 		System.out.print("Digite o número que você deseja encontrar: ");
 		nDigitado = input.nextInt();
