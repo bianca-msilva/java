@@ -15,6 +15,7 @@ public class Questao02Pilha {
 		Deque<String> livros = new ArrayDeque<String>();
 
 		do {
+			System.out.println("\n");
 			System.out.println("******************************");
 			System.out.println("1 - Adicionar Livro na pilha");
 			System.out.println("2 - Listar todos os livros");
@@ -52,11 +53,16 @@ public class Questao02Pilha {
 					System.out.println("A pilha está vazia!");
 					} else {
 						System.out.println(livros);
-						System.out.print("Digite o livro que deseja remover: ");
+						System.out.println("Digite o livro que deseja remover: ");
 						input.skip("\\R");
 						livro = input.nextLine().toLowerCase();
 						if (livros.contains(livro)) {
 							livros.remove(livro);
+							System.out.print("\nPilha atualizada:\n ");
+							for (String l : livros) {
+								System.out.println(l);
+							}
+							System.out.print("\nLivro removido!");
 						}else {
 							System.out.println("Este livro não existe na pilha!");
 						

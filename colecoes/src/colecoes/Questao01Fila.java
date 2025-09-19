@@ -29,19 +29,19 @@ public class Questao01Fila {
 			input.nextLine(); 
 			cliente = input.nextLine();
 			if(!clientes.contains(cliente)) {
-				System.out.print("Cliente adicionado!");
+				System.out.print("Fila:\n" + cliente + "\nCliente adicionado!");
 				clientes.add(cliente);
 			}else {
 				System.out.println("Cliente já existente na lista! Digite outro: ");
 				cliente = input.nextLine();
-				System.out.println("Cliente adicionado!");
+				System.out.println("Fila:\n" + cliente + "\nCliente adicionado!");
 				clientes.add(cliente);
 			}
 			
 		}
 		else if(resposta == 2) {
 			if(!clientes.isEmpty()) {
-				System.out.println("Lista de clientes:%n ");
+				System.out.println("Lista de clientes na fila:\n ");
 				for(String c : clientes) {
 					System.out.println(c);
 				}
@@ -52,6 +52,9 @@ public class Questao01Fila {
 		}
 		else if(resposta == 3) {
 			clientes.remove();
+			for(String c : clientes) {
+				System.out.println(c);
+			}
 			System.out.println("O cliente foi chamado!");
 		}
 		else {
