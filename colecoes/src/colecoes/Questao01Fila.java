@@ -1,6 +1,5 @@
 package colecoes;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -14,6 +13,8 @@ public class Questao01Fila {
 		int resposta;
 		String cliente, clienteRemov;
 		
+		do {
+		System.out.println("\n");
 		System.out.println("*****************************************");
 		System.out.println("1 - Adicionar um novo Cliente na fila.");
 		System.out.println("2 - Listar todos os Clientes na fila");
@@ -23,31 +24,48 @@ public class Questao01Fila {
 		System.out.println("Entre com a opção desejada: ");
 		resposta = input.nextInt();
 		
-		while(resposta != 0) {
-			if(resposta == 1) {
-				System.out.print("Digite o nome do Cliente: ");
-				input.skip("\\R");
-				cliente = input.nextLine();
+		if(resposta == 1) {
+			System.out.print("Digite o nome do Cliente: ");
+			input.nextLine(); 
+			cliente = input.nextLine();
+			if(!clientes.contains(cliente)) {
+				System.out.print("Cliente adicionado!");
 				clientes.add(cliente);
-				System.out.print("Digite 1 para continuar e 0 para finalizar: ");
-				resposta = input.nextInt();
-			}else if(resposta == 3) {
-				System.out.println("Digite o nome do Cliente que deseja retirar: ");
-				input.skip("\\R");
+			}else {
+				System.out.println("Cliente já existente na lista! Digite outro: ");
 				cliente = input.nextLine();
-				clientes.remove(cliente);
-				System.out.println("Digite 1 para continuar e 0 para finalizar: ");
-				resposta = input.nextInt();
+				System.out.println("Cliente adicionado!");
+				clientes.add(cliente);
 			}
-			else {
-				do {
-				System.out.println("Opção inválida! Digite outra opção válida: ");
-				resposta = input.nextInt();
-				}while(resposta != 0 && resposta != 1 && resposta != 2 && resposta != 3 );
+			
+		}
+		else if(resposta == 2) {
+			if(!clientes.isEmpty()) {
+				System.out.println("Lista de clientes:%n ");
+				for(String c : clientes) {
+					System.out.println(c);
+				}
+			}else {
+				System.out.println("A fila está vazia!");
 			}
-		}	
-		System.out.println(clientes);
+			
+		}
+		else if(resposta == 3) {
+			clientes.remove();
+			System.out.println("O cliente foi chamado!");
+		}
+		else {
+			System.out.println("Programa finalizado!");
+			break;
+		}
+	
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			System.out.println("Erro na pausa.");
+		}
 		
+		}while(resposta != 0);
 	}
 
 }
