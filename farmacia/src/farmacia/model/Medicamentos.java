@@ -1,10 +1,9 @@
-package model;
+package farmacia.model;
 
-public class Medicamento extends Produtos{
+public class Medicamentos extends Produto{
+String generico;
 	
-	String generico;
-	
-	public Medicamento(int id, String nome, int tipo, float preco, String generico) {
+	public Medicamentos(int id, String nome, int tipo, float preco, String generico) {
 		super(id, nome, tipo, preco);
 		this.generico = generico;
 	}
@@ -24,3 +23,4 @@ public class Medicamento extends Produtos{
 	}
 	
 }
+

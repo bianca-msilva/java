@@ -1,10 +1,9 @@
-package model;
+package farmacia.model;
 
-public class Cosmetico extends Produtos{
+public class Cosmeticos extends Produto {
+String fragancia;
 	
-	String fragancia;
-	
-	public Cosmetico(int id, String nome, int tipo, float preco, String fragancia) {
+	public Cosmeticos(int id, String nome, int tipo, float preco, String fragancia) {
 		super(id, nome, tipo, preco);
 		this.fragancia = fragancia;
 	}
